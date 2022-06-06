@@ -1,0 +1,30 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+    int check=7, rem;
+    bool x=false;
+    for(int i=2;i<check;i++)
+    {
+        rem=check%i;
+        if(rem==0)
+        {   
+            x=true;
+            cout<<"Not a prime number!";
+            break;
+        }
+        
+    }
+    
+    if(x==false)
+    cout<<"Prime Number!";
+
+    return 0;
+}
+
+\*
+Prime Number!
+*\
