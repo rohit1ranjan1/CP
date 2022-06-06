@@ -1,0 +1,40 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+    int check, count=0, sum=0, num, rem;
+    cout<<"Enter the number to check for Palindrome:";
+    cin>>check;
+    num=check;
+    while(num>0){
+        count++;
+        num=num/10;
+        //cout<<count<<"\n";
+    }
+    
+    num=check;
+    
+    while(count>0){
+        rem=num%10;
+        sum=sum+rem*(pow(10,(count-1)));
+        num=num/10;
+        count--;
+        //cout<<sum<<"\n";
+    }
+    
+    if(check==sum)
+    cout<<"The number "<<check<<" is an Palindrome number!";
+    
+    else
+    cout<<"The number "<<check<<" is not an Palindrome number!";
+
+    return 0;
+}
+
+\*
+Enter the number to check for Palindrome:48984
+The number 48984 is an Palindrome number!
+*\
