@@ -1,0 +1,68 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+void checkPrime(int a, int b);
+
+int main()
+{
+    int x=1, y=20;
+    checkPrime(x,y);
+
+    return 0;
+}
+
+void checkPrime(int a, int b)
+{
+    bool x=false;
+    int rem;
+    for(int check=a; check<=b; check++)
+    {
+     if(check==1)
+     {
+         x=true;
+         cout<<check<<" is not a Prime number!\n";
+     }
+    for(int i=2;i<check;i++)
+    {
+        rem=check%i;
+        
+        if(rem==0)
+        {   
+            x=true;
+            cout<<check<<" is not a Prime number!\n";
+            break;
+        }
+        
+    }
+    
+    if(x==false)
+    cout<<check<<" is a Prime Number!\n";
+    x=false;
+    }
+    
+}
+
+\*
+1 is not a Prime number!
+2 is a Prime Number!
+3 is a Prime Number!
+4 is not a Prime number!
+5 is a Prime Number!
+6 is not a Prime number!
+7 is a Prime Number!
+8 is not a Prime number!
+9 is not a Prime number!
+10 is not a Prime number!
+11 is a Prime Number!
+12 is not a Prime number!
+13 is a Prime Number!
+14 is not a Prime number!
+15 is not a Prime number!
+16 is not a Prime number!
+17 is a Prime Number!
+18 is not a Prime number!
+19 is a Prime Number!
+20 is not a Prime number!
+*\
