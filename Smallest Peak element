@@ -1,0 +1,42 @@
+//Peak elememt is the element of array that is greater than its neighbouring elements.
+
+#include <iostream>
+
+using namespace std;
+
+void peak_element(int *a, int size)
+{
+    int peak[4];
+    int n=0, temp;
+    
+    for(int i=0;i<4;i++)
+    {
+        if(a[i+1]>a[i] && a[i+1]>a[i+2])
+        {
+            peak[n]=a[i+1];
+            //cout<<peak[n];
+            n++;
+        }
+    }
+    
+    temp=peak[0];
+    
+    for(int i=1;i<n;i++)
+    {
+        if(peak[i]<temp)
+        temp=peak[i];
+    }
+    
+    cout<<"Smallest Peak Element: "<<temp;
+};
+
+int main()
+{
+    int a[6]={5,1,3,2,8,7};
+    
+    peak_element(a, 6);
+    
+    return 0;
+}
+
+//Smallest Peak Element: 3
